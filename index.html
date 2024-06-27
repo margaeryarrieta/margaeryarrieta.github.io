@@ -7,78 +7,115 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f9fafb;
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
         .container {
             max-width: 800px;
-            margin: 40px 20px;
-            padding: 20px;
+            padding: 40px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
             animation: fadeIn 1s ease-out; /* Fade in animation */
         }
         header {
             text-align: center;
-            padding: 30px 0;
-            background-color: #d4e0ff;
-            color: #333;
-            border-radius: 8px 8px 0 0;
+            margin-bottom: 40px;
         }
         header h1 {
+            font-size: 3em;
             margin: 0;
-            font-size: 2.5em;
-            animation: slideInLeft 1s ease-out; /* Slide in from left animation */
+            color: #333;
+            animation: slideInDown 1s ease-out; /* Slide in from top animation */
         }
         header p {
-            margin: 0;
             font-size: 1.2em;
-            font-style: italic;
-            animation: slideInRight 1s ease-out; /* Slide in from right animation */
-        }
-        .content {
-            padding: 20px;
+            margin: 10px 0 0;
             color: #555;
+            animation: slideInUp 1s ease-out; /* Slide in from bottom animation */
+        }
+        .section {
+            margin-top: 40px;
             animation: fadeInUp 1s ease-out; /* Fade in and slide up animation */
         }
-        .content h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+        .section h2 {
+            font-size: 2em;
             color: #333;
-            animation: fadeIn 1s ease-out; /* Fade in animation */
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-out; /* Slide in from left animation */
         }
-        .content p {
+        .section p {
+            font-size: 1.1em;
             line-height: 1.6;
+            color: #555;
             margin-bottom: 20px;
         }
-        .contact {
-            margin-top: 20px;
-            animation: fadeIn 1s ease-out; /* Fade in animation */
+        .section:nth-child(even) {
+            animation: fadeInUp 1s ease-out; /* Alternate animation for even sections */
         }
-        .contact h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+        .section:nth-child(even) h2 {
+            animation: slideInRight 1s ease-out; /* Alternate slide in from right animation */
+        }
+        .section:nth-child(even) .content {
+            text-align: right;
+        }
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out; /* Fade in and slide up animation */
+        }
+        .portfolio-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-item .details {
+            flex: 1;
+        }
+        .portfolio-item h3 {
+            margin: 0;
+            font-size: 1.5em;
             color: #333;
-            animation: fadeIn 1s ease-out; /* Fade in animation */
         }
-        .contact p {
+        .portfolio-item p {
             margin: 5px 0;
             font-size: 1.1em;
+            color: #555;
+        }
+        .testimonial {
+            padding: 20px;
+            background-color: #f2f4f6;
+            border-radius: 8px;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease-out; /* Fade in and slide up animation */
+        }
+        .testimonial p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #d4e0ff;
-            color: #333;
-            border-radius: 0 0 8px 8px;
-            margin-top: 20px;
+            background-color: #f2f4f6;
+            color: #555;
+            border-top: 1px solid #e0e4e8;
+            position: absolute;
+            bottom: 0;
+            left: 0;
             width: 100%;
             animation: slideInUp 1s ease-out; /* Slide up animation */
         }
@@ -134,6 +171,16 @@
                 transform: translateY(0);
             }
         }
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -142,15 +189,53 @@
             <h1>Margaery Arrieta</h1>
             <p>Social Media Creator</p>
         </header>
-        <div class="content">
+        <section class="section">
             <h2>About Me</h2>
             <p>Hello! I'm Margaery Arrieta, a passionate social media creator dedicated to crafting engaging and impactful content. With a keen eye for aesthetics and a love for storytelling, I help brands and individuals connect with their audience through innovative social media strategies.</p>
-            <div class="contact">
-                <h2>Contact Me</h2>
-                <p>Phone: <a href="tel:09176560145">09176560145</a></p>
-                <p>Facebook: <a href="https://www.facebook.com/MJNeri" target="_blank">FB.com/MJNeri</a></p>
+        </section>
+        <section class="section">
+            <h2>Services</h2>
+            <div class="content">
+                <h3>Content Strategy</h3>
+                <p>I develop comprehensive content strategies tailored to your brand's needs.</p>
+                <h3>Social Media Management</h3>
+                <p>Full-service management of your social media platforms to maximize engagement.</p>
+                <h3>Brand Consulting</h3>
+                <p>Guidance on enhancing your brand's online presence and audience connection.</p>
             </div>
-        </div>
+        </section>
+        <section class="section">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/150" alt="Portfolio Item">
+                <div class="details">
+                    <h3>Project Name 1</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/150" alt="Portfolio Item">
+                <div class="details">
+                    <h3>Project Name 2</h3>
+                    <p>Description of the project goes here.</p>
+                </div>
+            </div>
+            <!-- Add more portfolio items as needed -->
+        </section>
+        <section class="section">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Margaery's expertise in social media has been invaluable to our brand. Her strategies have significantly increased our engagement and reach."</p>
+                <p><strong>John Doe</strong>, CEO at Example Company</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </section>
+        <section class="section contact">
+            <h2>Contact Me</h2>
+            <p>Phone: <a href="tel:09176560145">09176560145</a></p>
+            <p>Email: <a href="mailto:margaery@example.com">margaery@example.com</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/MJNeri" target="_blank">FB.com/MJNeri</a></p>
+        </section>
     </div>
     <footer>
         &copy; 2024 Margaery Arrieta. All rights reserved.
