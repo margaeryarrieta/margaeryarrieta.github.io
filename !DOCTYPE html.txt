@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margaery Arrieta - Social Media Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #d4e0ff;
+            color: #333;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d4e0ff;
+            color: #333;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Margaery Arrieta</h1>
+            <p>Social Media Creator</p>
+        </header>
+        <div class="content">
+            <h2>About Me</h2>
+            <p>Hello! I'm Margaery Arrieta, a passionate social media creator dedicated to crafting engaging and impactful content. With a keen eye for aesthetics and a love for storytelling, I help brands and individuals connect with their audience through innovative social media strategies.</p>
+            <div class="contact">
+                <h2>Contact Me</h2>
+                <p>Phone: <a href="tel:09176560145">09176560145</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/MJNeri" target="_blank">FB.com/MJNeri</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Margaery Arrieta. All rights reserved.
+    </footer>
+</body>
+</html>
