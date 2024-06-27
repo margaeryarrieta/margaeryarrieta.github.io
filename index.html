@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margaery Arrieta - Social Media Creator</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f9fafb;
@@ -22,6 +23,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out; /* Fade in animation */
         }
         header {
             text-align: center;
@@ -33,20 +35,24 @@
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            animation: slideInLeft 1s ease-out; /* Slide in from left animation */
         }
         header p {
             margin: 0;
             font-size: 1.2em;
             font-style: italic;
+            animation: slideInRight 1s ease-out; /* Slide in from right animation */
         }
         .content {
             padding: 20px;
             color: #555;
+            animation: fadeInUp 1s ease-out; /* Fade in and slide up animation */
         }
         .content h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
             color: #333;
+            animation: fadeIn 1s ease-out; /* Fade in animation */
         }
         .content p {
             line-height: 1.6;
@@ -54,11 +60,13 @@
         }
         .contact {
             margin-top: 20px;
+            animation: fadeIn 1s ease-out; /* Fade in animation */
         }
         .contact h2 {
             font-size: 1.8em;
             margin-bottom: 10px;
             color: #333;
+            animation: fadeIn 1s ease-out; /* Fade in animation */
         }
         .contact p {
             margin: 5px 0;
@@ -72,6 +80,59 @@
             border-radius: 0 0 8px 8px;
             margin-top: 20px;
             width: 100%;
+            animation: slideInUp 1s ease-out; /* Slide up animation */
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
